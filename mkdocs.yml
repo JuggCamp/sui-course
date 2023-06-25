@@ -1,1 +1,130 @@
-site_name: My Docs
+
+# Project information
+site_name: Sui Course
+site_url: http://suicourse.xyz/
+site_author: "0x6368616e67"
+site_description: >-
+  A course about sui development
+
+# Repository
+repo_name: 0x6368616e67/sui-course
+repo_url: https://github.com/0x6368616e67/sui-course
+
+
+# Copyright
+copyright: Copyright &copy; 2023 - 2023 0x6368616e67
+
+# Configuration
+theme:
+  name: material
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+
+
+
+# Customization
+extra:
+  annotate:
+    json: [.s2]
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/0x6368616e67
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/0x6368616e67
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
+  - Sui101: 
+    - Installation: sui101/install.md
+  
