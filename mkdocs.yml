@@ -136,6 +136,8 @@ nav:
   - Home: index.md
   - Sui101: 
     - Installation: sui101/install.md
+  - SuiMove:
+    - Move: sui101/install.md
   - Bootcamp:
     - Learn the fundamentals of Sui: bootcamp/general_overview_and_introduction_to_sui_network.md
     - Intro to Sui Objects: bootcamp/intro_to_sui_objects.md
