@@ -138,8 +138,8 @@ nav:
     - Installation: sui101/install.md
   - Bootcamp:
     - Learn the fundamentals of Sui: bootcamp/general_overview_and_introduction_to_sui_network.md
-    - Learn to use Sui Move Analyzer: bootcamp/learn_to_use_sui_move_analyzer.md
     - Intro to Sui Objects: bootcamp/intro_to_sui_objects.md
     - Intro to Dynamic Objects: bootcamp/intro_to_dynamic_objects.md
     - Borrowing and Lending on Sui: bootcamp/borrowing_and_lending_on_sui.md
+    - Learn to use Sui Move Analyzer: bootcamp/learn_to_use_sui_move_analyzer.md
   
