@@ -2,7 +2,7 @@
 # Project information
 site_name: Sui Course
 site_url: http://suicourse.xyz/
-site_author: "0x6368616e67"
+site_author: "JuggCamp"
 site_description: >-
   A course about sui development
 
@@ -12,7 +12,7 @@ repo_url: https://github.com/0x6368616e67/sui-course
 
 
 # Copyright
-copyright: Copyright &copy; 2023 - 2023 0x6368616e67
+copyright: Copyright &copy; 2023 - 2023 <a href="https://juggcamp.com">JuggCamp</a>
 
 # Configuration
 theme:
