@@ -135,10 +135,24 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Sui101: 
-    - Installation: sui101/install.md
+    - Intro to Sui: 
+      - About Sui: sui101/intro/about.md
+      - Core Concept: sui101/intro/concept.md
+      - How Sui Works: sui101/intro/how_sui_works.md
+    - Interact with Sui: 
+      - Index: sui101/intro/about.md
+    - Interact with Sui Contract:
+      - Index: sui101/intro/about.md
+    - The Sui Move Programming:
+      - Index: sui101/intro/about.md
+    - Programming Sui Contract:
+      - Index: sui101/intro/about.md
+    - DApp Practice-Capy:
+      - Index: sui101/intro/about.md
+
   - SuiMove:
     - Move: suimove/index.md
-  - Bootcamp:
+  - VideoTutorial:
     - Learn the fundamentals of Sui: bootcamp/general_overview_and_introduction_to_sui_network.md
     - Intro to Sui Objects: bootcamp/intro_to_sui_objects.md
     - Intro to Dynamic Objects: bootcamp/intro_to_dynamic_objects.md
