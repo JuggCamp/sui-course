@@ -7,8 +7,8 @@ site_description: >-
   A course about sui development
 
 # Repository
-repo_name: 0x6368616e67/sui-course
-repo_url: https://github.com/0x6368616e67/sui-course
+repo_name: JuggCamp/sui-course
+repo_url: https://github.com/JuggCamp/sui-course
 
 
 # Copyright
@@ -82,7 +82,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/0x6368616e67
+      link: https://github.com/JuggCamp/sui-course
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/0x6368616e67
 
