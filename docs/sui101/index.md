@@ -3,8 +3,8 @@
 ## Intro to Sui
 
 - [x] [About Sui](./intro/about.md)
-- [ ] [Core Concept](./intro/concept.md)
-- [ ] [How Sui Works](./intro/how_sui_works.md)
+- [x] [Core Concept](./intro/concept.md)
+- [x] [How Sui Works](./intro/how_sui_works.md)
 
 ## Interact with Sui
 
