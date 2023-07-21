@@ -1,5 +1,17 @@
 # Core Concept
 
+
+## Checkpoint
+
+Sui is a DAG-based blockchain and uses checkpoints for node synchronization and global transaction ordering. Checkpoints differ from blocks in the following ways:
+
+Sui creates checkpoints and adds finalized transactions. Note that transactions are finalized even before they are included in a checkpoint
+Checkpoints do not fork, roll back, or reorganize.
+
+Sui creates one checkpoint about every 3 seconds.
+
+A checkpoint is established every time an increment is added to a blockchain resulting from a certified transaction. Checkpoints work much like a write ahead log that stores state prior to full execution of a program. The calls in that program represent a smart contract in a blockchain. A checkpoint contains not only the transactions but also commitments to the state of the blockchain before and after the transactions.
+
 ## Transaction
 All updates to the Sui ledger happen via a transaction. A transaction in Sui is a change to the blockchain. This may be a simple transaction affecting only single-writer, single-address objects, such as minting an NFT or transferring an NFT or another token. These transactions may bypass the consensus protocol in Sui.
 
