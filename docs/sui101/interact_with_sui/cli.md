@@ -101,7 +101,8 @@ sui client call --function your_function --module your_module --package 0x<YOUR-
 
 Here is an example, we first publish a Sui test contract:
 
-``` sui client publish /Users/changzeng/repos/github.com/MystenLabs/sui/sui_programmability/examples/move_tutorial --gas-budget 15000000
+``` 
+sui client publish /Users/changzeng/repos/github.com/MystenLabs/sui/sui_programmability/examples/move_tutorial --gas-budget 15000000
 
 INCLUDING DEPENDENCY Sui
 INCLUDING DEPENDENCY MoveStdlib
@@ -254,25 +255,29 @@ There are a lot of commands, most of which correspond to RPC.
 ### Select Wallet
 
 pass:
-``` sui client addresses
+``` 
+sui client addresses
 Showing 1 result.
 0x65635b3ed941f633cdc51e79f7a730541544344c4dc44b09f5ac33964ff86d78 <=
 ```
 
 You can list several wallets managed in the local keystore file. If you want to use the wallet with this address, you need to activate it first:
-```sui client switch --address 0x65635b3ed941f633cdc51e79f7a730541544344c4dc44b09f5ac33964ff86d78
+```
+sui client switch --address 0x65635b3ed941f633cdc51e79f7a730541544344c4dc44b09f5ac33964ff86d78
 Active address switched to 0x65635b3ed941f633cdc51e79f7a730541544344c4dc44b09f5ac33964ff86d78
 ```
 
 You can also check which wallet is currently in use:
-```sui client active-address
+```
+sui client active-address
 0x65635b3ed941f633cdc51e79f7a730541544344c4dc44b09f5ac33964ff86d78
 ```
 
 ### Operation object
 
 Check which objects the current user has:
-```sui client active-address 
+```
+sui client active-address 
 0x65635b3ed941f633cdc51e79f7a730541544344c4dc44b09f5ac33964ff86d78
 ```
 
@@ -291,7 +296,8 @@ sui client objects
 ```
 
 View a specific Object:
-```sui client object 0xb7c75543bb69b9f74448783ebfd37eba696d5361ad868df71326d87ef7356a1c
+```
+sui client object 0xb7c75543bb69b9f74448783ebfd37eba696d5361ad868df71326d87ef7356a1c
 ----- 0x2::coin::Coin<0x2::sui::SUI> (0xb7c75543bb69b9f74448783ebfd37eba696d5361ad868df71326d87ef7356a1c[0x1b7]) -----
 Owner: Account Address ( 0x65635b3ed941f633cdc51e79f7a730541544344c4dc44b09f5ac33964ff86d78 )
 Version: 0x1b7
@@ -338,7 +344,8 @@ Array [
 
 ### Operate the Coin object
 The token object of SUI is a special existence, it is a
-```sui client object 0xb7c75543bb69b9f74448783ebfd37eba696d5361ad868df71326d87ef7356a1c
+```
+sui client object 0xb7c75543bb69b9f74448783ebfd37eba696d5361ad868df71326d87ef7356a1c
 ----- 0x2::coin::Coin<0x2::sui::SUI> (0xb7c75543bb69b9f74448783ebfd37eba696d5361ad868df71326d87ef7356a1c[0x1b7]) -----
 Owner: Account Address ( 0x65635b3ed941f633cdc51e79f7a730541544344c4dc44b09f5ac33964ff86d78 )
 Version: 0x1b7
@@ -352,7 +359,8 @@ id: 0xb7c75543bb69b9f74448783ebfd37eba696d5361ad868df71326d87ef7356a1c
 
 
 "0x2::sui::SUI" object, and there are multiple. Then there will be a need for splitting and merging.
-```sui client split-coin --coin-id  0xb7c75543bb69b9f74448783ebfd37eba696d5361ad868df71326d87ef7356a1c  --amounts 1000  --gas-budget 10000000
+```
+sui client split-coin --coin-id  0xb7c75543bb69b9f74448783ebfd37eba696d5361ad868df71326d87ef7356a1c  --amounts 1000  --gas-budget 10000000
 ----- Transaction Digest ----
 GUXNSZMRSgWjftfGCE1W9uzKtAfyADtjsDpKwAJzCzym
 ----- Transaction Data ----
@@ -404,7 +412,8 @@ Array [
 ```
 
 As you can see, a "0xd2a4b7892e6e4dce179c08ee62d07d1cc0117d698d6202219d11171efd61ee04" object was created. Its balance is:
-``` sui client object 0xd2a4b7892e6e4dce179c08ee62d07d1cc0117d698d6202219d11171efd61ee04
+``` 
+sui client object 0xd2a4b7892e6e4dce179c08ee62d07d1cc0117d698d6202219d11171efd61ee04
 ----- 0x2::coin::Coin<0x2::sui::SUI> (0xd2a4b7892e6e4dce179c08ee62d07d1cc0117d698d6202219d11171efd61ee04[0x1bb]) -----
 Owner: Account Address ( 0x65635b3ed941f633cdc51e79f7a730541544344c4dc44b09f5ac33964ff86d78 )
 Version: 0x1bb
@@ -419,7 +428,8 @@ id: 0xd2a4b7892e6e4dce179c08ee62d07d1cc0117d698d6202219d11171efd61ee04
 1000MIST。
 
 At this point, our account has 3 SUI objects:
-```sui client objects
+```
+sui client objects
                  Object ID                  |  Version   |                    Digest                    |   Owner Type    |               Object Type               
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 0xb7c75543bb69b9f74448783ebfd37eba696d5361ad868df71326d87ef7356a1c |    443     | Si6CwpX4HHKEvB5MJbV+SP+xjGuM4obWf3t2s3geRNk= |  AddressOwner   |  Some(Struct(MoveObjectType(GasCoin)))  

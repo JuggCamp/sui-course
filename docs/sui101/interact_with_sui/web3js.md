@@ -10,14 +10,17 @@ The Web3.js library is mainly divided into three parts:
 ## SDK installation
 In your project, add a dependency on Sui.js via npm:
 
-```npm install @mysten/sui.js
+```
+npm install @mysten/sui.js
 ```
 Then, in your project code, import:
 
-```import { JsonRpcProvider, testnetConnection } from '@mysten/sui.js';
+```
+import { JsonRpcProvider, testnetConnection } from '@mysten/sui.js';
     // connect to Testnet
     const provider = new JsonRpcProvider(testnetConnection);
 ```
+
 This will create an RPC connection `provider` to the test network, and `JsonRpcProvider` encapsulates Sui's RPC methods.
 
 ## Reading API

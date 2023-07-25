@@ -138,7 +138,7 @@ Sign And Send Transaction invoke `signAndExecuteTransactionBlock` method：
 
 ```
 
-## 参考
+## Reference
 
 * [Sui Wallet by Mysten Labs](https://docs.mystenlabs.com/wallet)
 * [Wallet Adapter](https://github.com/MystenLabs/sui/tree/main/sdk/wallet-adapter)

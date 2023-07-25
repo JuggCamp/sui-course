@@ -27,7 +27,7 @@ The HTTP interface provides external services through JSON RPC format, [JSON RPC
 The RPC mode uses JSON as the serialization tool and HTTP as the transport protocol. It has multiple versions, and the current version is v2.
 
 The request format is:
-
+```
      {
          "jsonrpc": "2.0",
          "id": 1,
@@ -36,11 +36,13 @@ The request format is:
              "1000"
          ]
      }
+```
 
 The outermost layer here is a dictionary, in which each Key is fixed, and method represents the function method name of RPC. params represents the parameters of the function.
 
 The corresponding request result is:
 
+```
      {
          "jsonrpc": "2.0",
          "result": {
@@ -48,6 +50,7 @@ The corresponding request result is:
              },
          "id": 1
      }
+```
 
 Similarly, several fields here are also fixed, and result indicates the result of the request. The id corresponds to the id in the request, which indicates the result of the request.
 
@@ -55,7 +58,9 @@ Similarly, several fields here are also fixed, and result indicates the result o
 Return the first four bytes of the chain's genesis checkpoint digest.
 
 use curl in your console:
-```curl https://fullnode.testnet.sui.io:443      -X POST -H "Content-Type: application/json" -d '
+
+```
+curl https://fullnode.testnet.sui.io:443      -X POST -H "Content-Type: application/json" -d '
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -111,6 +116,7 @@ Return a checkpoint
 Return transaction events.
 
 *Params*
+
 * transaction_digest : <TransactionDigest> - the event query criteria.
 
 *Result*
@@ -138,6 +144,7 @@ Return the sequence number of the latest checkpoint that has been executed
 
 
 *Result*
+
 * BigInt<u64> : <BigInt_for_uint64>
 
 ```
@@ -160,10 +167,12 @@ here sequence will be use in transaction.
 Return the object information for a specified object
 
 *Params*
+
 * object_id : <ObjectID> - the ID of the queried object
 * options : <ObjectDataOptions> - options for specifying the content to be returned
 
 *Result*
+
 * SuiObjectResponse : <SuiObjectResponse>
     * data : <[ObjectData]>
     * error : <[ObjectResponseError]>
@@ -201,10 +210,12 @@ here it is a SUI Coin Object，and balance is 995950600 MIST.
 Return the transaction response object.
 
 *Params*
+
 * digest : <TransactionDigest> - the digest of the queried transaction
 * options : <TransactionBlockResponseOptions> - options for specifying the content to be returned
 
 *Result*
+
 * SuiTransactionBlockResponse : <TransactionBlockResponse>
 
 ```
@@ -235,8 +246,11 @@ curl https://fullnode.testnet.sui.io:443      -X POST -H "Content-Type: applicat
 Return the total coin balance for all coin type, owned by the address owner.
 
 *Params*
+
 * owner : <SuiAddress> - the owner's Sui address
+
 *Result*
+
 * Vec<Balance> : <[Balance]>
 
 ```
@@ -252,16 +266,20 @@ Return the total coin balance for all coin type, owned by the address owner.
 '
 {"jsonrpc":"2.0","result":[{"coinType":"0x2::sui::SUI","coinObjectCount":2,"totalBalance":"1977124704","lockedBalance":{}}],"id":1}% 
 ```
+
 here account"0x65635b3ed941f633cdc51e79f7a730541544344c4dc44b09f5ac33964ff86d78" only has SUI, and balance is 1.97SUI.
 
 ### suix_getAllCoins
 Return all Coin objects owned by an address.
 
 *Params*
+
 * owner : <SuiAddress> - the owner's Sui address
 * cursor : <ObjectID> - optional paging cursor
 * limit : <uint> - maximum number of items per page
+
 *Result*
+
 * CoinPage : <Page_for_Coin_and_ObjectID>
 
 ```
@@ -283,14 +301,17 @@ here no "cursor","limit" will got all coins. in the result all coins' object ret
 Return the total coin balance for one coin type, owned by the address owner.
 
 *Params*
+
 * owner : <SuiAddress> - the owner's Sui address
 * coin_type : <string> - optional type names for the coin (e.g., 0x168da5bf1f48dafc111b0a488fa454aca95e0b5e::usdc::USDC), default to 0x2::sui::SUI if not specified.
+
 *Result*
+
 * Balance : <Balance>
-    * coinObjectCount : <uint>
-    * coinType : <string>
-    * lockedBalance : <object>
-    * totalBalance : <BigInt_for_uint128>
+  * coinObjectCount : <uint>
+  * coinType : <string>
+  * lockedBalance : <object>
+  * totalBalance : <BigInt_for_uint128>
 
 ```
 curl https://fullnode.testnet.sui.io:443      -X POST -H "Content-Type: application/json" -d '
@@ -304,7 +325,7 @@ curl https://fullnode.testnet.sui.io:443      -X POST -H "Content-Type: applicat
   ]
 }
 '
-{"jsonrpc":"2.0","result":{"coinType":"0x2::sui::SUI","coinObjectCount":2,"totalBalance":"1977124704","lockedBalance":{}},"id":1}%  
+{"jsonrpc":"2.0","result":{"coinType":"0x2::sui::SUI","coinObjectCount":2,"totalBalance":"1977124704","lockedBalance":{}},"id":1}
 ```
 here we got two 0x2::sui::SUI Object.
 
@@ -313,8 +334,11 @@ here we got two 0x2::sui::SUI Object.
 Return metadata(e.g., symbol, decimals) for a coin
 
 *Params*
+
 * coin_type : <string> - type name for the coin (e.g., 0x168da5bf1f48dafc111b0a488fa454aca95e0b5e::usdc::USDC)
+
 *Result*
+
 * SuiCoinMetadata : <SuiCoinMetadata>
     * decimals : <uint8> - Number of decimal places the coin uses.
     * description : <string> - Description of the token
@@ -344,11 +368,14 @@ here we got name/symbol/iconUrl etc... of SUI
 Return all Coin<`coin_type`> objects owned by an address.
 
 *Params*
+
 * owner : <SuiAddress> - the owner's Sui address
 * coin_type : <string> - optional type name for the coin (e.g., 0x168da5bf1f48dafc111b0a488fa454aca95e0b5e::usdc::USDC), default to 0x2::sui::SUI if not specified.
 * cursor : <ObjectID> - optional paging cursor
 * limit : <uint> - maximum number of items per page
+
 *Result*
+
 * CoinPage : <Page_for_Coin_and_ObjectID>
 Example
 Gets all SUI coins owned by the address provided. Return a paginated list of `limit` results per page. Similar to `suix_getAllCoins`, but provides a way to filter by coin type.
@@ -376,12 +403,15 @@ here we got `"hasNextPage":false`, if true, we could add params: "limit" and  "c
 Return the dynamic field object information for a specified object
 
 *Params*
+
 * parent_object_id : <ObjectID> - The ID of the queried parent object
 * name : <DynamicFieldName> - The Name of the dynamic field
-* Result*
-SuiObjectResponse : <SuiObjectResponse>
- data : <[ObjectData]>
- error : <[ObjectResponseError]>
+
+*Result*
+
+* SuiObjectResponse : <SuiObjectResponse>
+  * data : <[ObjectData]>
+  * error : <[ObjectResponseError]>
 
  
 ### suix_getDynamicFields
@@ -389,23 +419,27 @@ Return the list of dynamic field objects owned by an object.
 Gets dynamic fields for the object the request provides in a paginated list of `limit` dynamic field results per page. The default limit is 50.
 
 *Params*
+
 * parent_object_id : <ObjectID> - The ID of the parent object
 * cursor : <ObjectID> - An optional paging cursor. If provided, the query will start from the next item after the specified cursor. Default to start from the first item if not specified.
 * limit : <uint> - Maximum item returned per page, default to [QUERY_MAX_RESULT_LIMIT] if not specified.
 
 *Result*
+
 * DynamicFieldPage : <Page_for_DynamicFieldInfo_and_ObjectID>
 
 ### suix_getOwnedObjects
 Return the list of objects owned by an address. Note that if the address owns more than `QUERY_MAX_RESULT_LIMIT` objects, the pagination is not accurate, because previous page may have been updated when the next page is fetched.
 
 *Params*
+
 * address : <SuiAddress> - the owner's Sui address
 * query : <ObjectResponseQuery> - the objects query criteria.
 * cursor : <ObjectID> - An optional paging cursor. If provided, the query will start from the next item after the specified cursor. Default to start from the first item if not specified.
 * limit : <uint> - Max number of items returned per page, default to [QUERY_MAX_RESULT_LIMIT] if not specified.
 
 *Result*
+
 * ObjectsPage : <Page_for_SuiObjectResponse_and_ObjectID>
 
 ```
@@ -446,6 +480,7 @@ Returns all the objects the address provided in the request owns and that match 
 Return the reference gas price for the network
 
 *Result*
+
 * BigInt<u64> : <BigInt_for_uint64>
 
 ```
@@ -467,12 +502,14 @@ it is 1000MIST on testnet.
 Return list of events for a specified query criteria.
 
 *Params*
+
 * query : <EventFilter> - The event query criteria. See Event filter documentation for examples.
 * cursor : <EventID> - optional paging cursor
 * limit : <uint> - maximum number of items per page, default to [QUERY_MAX_RESULT_LIMIT] if not specified.
 * descending_order : <boolean> - query result ordering, default to false (ascending order), oldest record first.
 
 *Result*
+
 * EventPage : <Page_for_Event_and_EventID>
 
 
@@ -480,12 +517,14 @@ Return list of events for a specified query criteria.
 Return list of transactions for a specified query criteria.
 
 *Params*
+
 * query : <TransactionBlockResponseQuery> - the transaction query criteria.
 * cursor : <TransactionDigest> - An optional paging cursor. If provided, the query will start from the next item after the specified cursor. Default to start from the first item if not specified.
 * limit : <uint> - Maximum item returned per page, default to QUERY_MAX_RESULT_LIMIT if not specified.
 * descending_order : <boolean> - query result ordering, default to false (ascending order), oldest record first.
 
 *Result*
+
 * TransactionBlocksPage : <Page_for_TransactionBlockResponse_and_TransactionDigest>
 
 ```
@@ -517,7 +556,7 @@ Websocket is a feature added to HTTP to supplement long links. In general, it ca
 This long connection is used to push messages to the client.
 
 It's just that the content of the message here is also in JSONRPC format, such as:
-
+```
      {
          "jsonrpc": "2.0",
          "id": 1,
@@ -528,6 +567,7 @@ It's just that the content of the message here is also in JSONRPC format, such a
              }
          ]
      }
+```
 
 Such messages subscribe to <PACKAGE-ID> event messages.
 
@@ -538,9 +578,11 @@ When there is a change, the result is also packaged into a JSONRPC format and pu
 Subscribe to a stream of Sui event
 
 *Params*
+
 * filter : <EventFilter> - The filter criteria of the event stream. See Event filter documentation for examples.
 
 *Result*
+
 * SuiEvent : <Event>
 
 ### suix_subscribeTransaction
@@ -548,7 +590,9 @@ Subscribe to a stream of Sui event
 Subscribe to a stream of Sui transaction effects
 
 *Params*
+
 * filter : <TransactionFilter> -
 
 *Result*
+
 * SuiTransactionBlockEffects : <TransactionBlockEffects>
