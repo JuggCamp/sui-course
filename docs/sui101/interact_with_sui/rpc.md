@@ -85,17 +85,17 @@ Return a checkpoint
 *Result* 
 
 * Checkpoint : <Checkpoint>
-    * checkpointCommitments : <[CheckpointCommitment]> - Commitments to checkpoint state
-    * digest : <[CheckpointDigest]> - Checkpoint digest
-    * endOfEpochData : <[EndOfEpochData]> - Present only on the final checkpoint of the epoch.
-    * epoch : <[BigInt_for_uint64]> - Checkpoint's epoch ID
-    * epochRollingGasCostSummary : <[GasCostSummary]> - The running total gas costs of all transactions included in the current epoch so far until this checkpoint.
-    * networkTotalTransactions : <[BigInt_for_uint64]> - Total number of transactions committed since genesis, including those in this checkpoint.
-    * previousDigest : <[CheckpointDigest]> - Digest of the previous checkpoint
-    * sequenceNumber : <[BigInt_for_uint64]> - Checkpoint sequence number
-    * timestampMs : <[BigInt_for_uint64]> - Timestamp of the checkpoint - number of milliseconds from the Unix epoch Checkpoint timestamps are monotonic, but not strongly monotonic - subsequent checkpoints can have same timestamp if they originate from the same underlining consensus commit
-    *transactions : <[TransactionDigest]> - Transaction digests
-    * validatorSignature : <[Base64]> - Validator Signature
+  * checkpointCommitments : <[CheckpointCommitment]> - Commitments to checkpoint state
+  * digest : <[CheckpointDigest]> - Checkpoint digest
+  * endOfEpochData : <[EndOfEpochData]> - Present only on the final checkpoint of the epoch.
+  * epoch : <[BigInt_for_uint64]> - Checkpoint's epoch ID
+  * epochRollingGasCostSummary : <[GasCostSummary]> - The running total gas costs of all transactions included in the current epoch so far until this checkpoint.
+  * networkTotalTransactions : <[BigInt_for_uint64]> - Total number of transactions committed since genesis, including those in this checkpoint.
+  * previousDigest : <[CheckpointDigest]> - Digest of the previous checkpoint
+  * sequenceNumber : <[BigInt_for_uint64]> - Checkpoint sequence number
+  * timestampMs : <[BigInt_for_uint64]> - Timestamp of the checkpoint - number of milliseconds from the Unix epoch Checkpoint timestamps are monotonic, but not strongly monotonic - subsequent checkpoints can have same timestamp if they originate from the same underlining consensus commit
+  *transactions : <[TransactionDigest]> - Transaction digests
+  * validatorSignature : <[Base64]> - Validator Signature
 
 ```
  curl https://fullnode.testnet.sui.io:443      -X POST -H "Content-Type: application/json" -d '
@@ -174,8 +174,8 @@ Return the object information for a specified object
 *Result*
 
 * SuiObjectResponse : <SuiObjectResponse>
-    * data : <[ObjectData]>
-    * error : <[ObjectResponseError]>
+  * data : <[ObjectData]>
+  * error : <[ObjectResponseError]>
 
 
 ```
@@ -340,12 +340,12 @@ Return metadata(e.g., symbol, decimals) for a coin
 *Result*
 
 * SuiCoinMetadata : <SuiCoinMetadata>
-    * decimals : <uint8> - Number of decimal places the coin uses.
-    * description : <string> - Description of the token
-    * iconUrl : <string,null> - URL for the token logo
-    * id : <[ObjectID]> - Object id for the CoinMetadata object
-    * name : <string> - Name for the token
-    * symbol : <string> - Symbol for the token
+  * decimals : <uint8> - Number of decimal places the coin uses.
+  * description : <string> - Description of the token
+  * iconUrl : <string,null> - URL for the token logo
+  * id : <[ObjectID]> - Object id for the CoinMetadata object
+  * name : <string> - Name for the token
+  * symbol : <string> - Symbol for the token
 
 ```
 curl https://fullnode.testnet.sui.io:443      -X POST -H "Content-Type: application/json" -d '
