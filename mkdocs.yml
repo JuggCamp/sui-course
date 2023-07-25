@@ -140,7 +140,11 @@ nav:
       - Core Concept: sui101/intro/concept.md
       - How Sui Works: sui101/intro/how_sui_works.md
     - Interact with Sui: 
-      - Index: sui101/intro/about.md
+      - Sui Client CLI: sui101/interact_with_sui/cli.md
+      - Sui's RPC: sui101/interact_with_sui/rpc.md
+      - sui.js for Sui: sui101/interact_with_sui/web3js.md
+      - Wallet for Sui: sui101/interact_with_sui/wallet.md
+
     - Interact with Sui Contract:
       - Index: sui101/intro/about.md
     - The Sui Move Programming:
