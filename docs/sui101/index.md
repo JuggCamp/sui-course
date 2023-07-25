@@ -8,10 +8,10 @@
 
 ## Interact with Sui
 
-- [ ] [Sui's RPC](./)
-- [ ] [Sui Client CLI](./)
-- [ ] [Web3.js for Sui](./)
-- [ ] [Wallet for Sui](./)
+- [x] [Sui Client CLI](./interact_with_sui/cli.md)
+- [x] [Sui's RPC](./interact_with_sui/rpc.md)
+- [x] [sui.js for Sui](./interact_with_sui/web3js.md)
+- [x] [Wallet for Sui](./interact_with_sui/wallet.md)
 
 ## Interact with Sui Contract
 - [ ] [Read from Contract](./)
