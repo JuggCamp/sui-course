@@ -20,9 +20,8 @@
 
 ## The Sui Move Programming
 
-- [ ] [Basic Move](./)
-- [ ] [Sui Move](./)
-- [ ] [Sui Framework](./)
+- [x] [Basic Move](./the_sui_move_programming/basic_move.md)
+- [x] [Sui Move](./the_sui_move_programming/sui_move.md)
 
 ## Programming Sui Contract
 
@@ -32,7 +31,7 @@
 
 ## DApp Practice: Capy
 
-- [ ] [What is Capy](./)
-- [ ] [The Contract's Implementation](./)
-- [ ] [Play with Capy](./)
+- [ ] [What is Capy](./dapp_practice_capy/what_is_capy.md)
+- [ ] [The Contract's Implementation](./dapp_practice_capy/contract_for_capy.md)
+- [ ] [Play with Capy](./dapp_practice_capy/play_with_capy.md)
 

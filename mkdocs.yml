@@ -148,11 +148,14 @@ nav:
     - Interact with Sui Contract:
       - Index: sui101/intro/about.md
     - The Sui Move Programming:
-      - Index: sui101/intro/about.md
+      - Basic Move: sui101/the_sui_move_programming/basic_move.md
+      - Sui Move: sui101/the_sui_move_programming/sui_move.md
     - Programming Sui Contract:
       - Index: sui101/intro/about.md
     - DApp Practice-Capy:
-      - Index: sui101/intro/about.md
+      - What is Capy: sui101/dapp_practice_capy/what_is_capy.md
+      - The Contract's Implementation: sui101/dapp_practice_capy/contract_for_capy.md
+      - Play with Capy: sui101/dapp_practice_capy/play_with_capy.md
 
   - SuiMove:
     - Move: suimove/index.md
