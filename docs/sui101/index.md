@@ -25,9 +25,9 @@
 
 ## Programming Sui Contract
 
-- [ ] [Hello World](./)
-- [ ] [Build Your Pakcages](./)
-- [ ] [Program with Objects](./)
+- [x] [Hello World](./programming_sui_contract/hello_world.md)
+- [x] [Test Your Pakcages](./programming_sui_contract/test_packages.md)
+- [x] [Program with Objects](./programming_sui_contract/program_with_ojbects.md)
 
 ## DApp Practice: Capy
 

@@ -150,7 +150,9 @@ nav:
       - Basic Move: sui101/the_sui_move_programming/basic_move.md
       - Sui Move: sui101/the_sui_move_programming/sui_move.md
     - Programming Sui Contract:
-      - Index: sui101/intro/about.md
+      - Hello World: sui101/programming_sui_contract/hello_world.md
+      - Test Your Pakcages: sui101/programming_sui_contract/test_packages.md
+      - Program with Objects: sui101/programming_sui_contract/program_with_ojbects.md
     - DApp Practice-Capy:
       - What is Capy: sui101/dapp_practice_capy/what_is_capy.md
       - The Contract's Implementation: sui101/dapp_practice_capy/contract_for_capy.md
