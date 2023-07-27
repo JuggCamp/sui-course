@@ -14,9 +14,8 @@
 - [x] [Wallet for Sui](./interact_with_sui/wallet.md)
 
 ## Interact with Sui Contract
-- [ ] [Read from Contract](./)
-- [ ] [Invoke Contract's Method](./)
-- [ ] [Programmable Transaction ](./)
+- [x] [Invoke Contract's Method](./interact_with_sui_contract/invoke_contracts_method.md)
+- [x] [Programmable Transaction ](./interact_with_sui_contract/programmable_transaction.md)
 
 ## The Sui Move Programming
 

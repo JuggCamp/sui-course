@@ -145,7 +145,8 @@ nav:
       - Wallet for Sui: sui101/interact_with_sui/wallet.md
 
     - Interact with Sui Contract:
-      - Index: sui101/intro/about.md
+      - Invoke Contract's Method: s101/interact_with_sui_contract/invoke_contracts_method.md
+      - Programmable Transaction: ./interact_with_sui_contract/programmable_transaction.md
     - The Sui Move Programming:
       - Basic Move: sui101/the_sui_move_programming/basic_move.md
       - Sui Move: sui101/the_sui_move_programming/sui_move.md
